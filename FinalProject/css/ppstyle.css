@@ -1,0 +1,2436 @@
+/*
+    Name: Susannie Vhil Tiempo
+    Last Update: March 27, 2020
+    Purpose: Style code for the Poseidon's Palace website.
+*/
+/*REGION: Variable Declaration*/
+/*ENDREGION*/
+/*REGION: Mixin Declaration*/
+/*ENDREGION*/
+/*REGION: Default Style*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Montserrat", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/*ENDREGION*/
+/*REGION: Grid Declaration*/
+#wrapper {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: repeat(1fr, 12);
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(30px, auto);
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+header {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: repeat(1fr, 12);
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(30px, auto);
+  overflow-x: 0 auto;
+  background-color: #ac0700;
+  width: 100%;
+}
+
+#seafoodProducts,
+#souvenierProducts {
+  display: grid;
+  display: -ms-grid;
+  -ms-grid-columns: repeat(1fr, 12);
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(30px, auto);
+  overflow-x: 0 auto;
+  width: 100%;
+}
+
+/*ENDREGION*/
+/*REGION: Default Grids*/
+/*Index Grids*/
+header {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+}
+
+#logo {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+}
+
+#logoText {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / 5;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+}
+
+#navbar {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 8;
+  grid-column: 5 / 13;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+}
+
+#main {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2 / 12;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  grid-row: 5 / 7;
+}
+
+#valuePrep {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 2;
+  grid-row: 7 / 9;
+}
+
+#featured {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 9;
+  -ms-grid-row-span: 3;
+  grid-row: 9 / 12;
+}
+
+.storypic, .storyText {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1 / 6;
+  -ms-grid-row: 12;
+  -ms-grid-row-span: 5;
+  grid-row: 12 / 17;
+}
+
+.storyText {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 7;
+  grid-column: 6 / 13;
+  -ms-grid-row: 12;
+  -ms-grid-row-span: 5;
+  grid-row: 12 / 17;
+}
+
+#testimonials {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/ 13;
+  -ms-grid-row: 17;
+  -ms-grid-row-span: 5;
+  grid-row: 17 / 22;
+}
+
+#mailingList {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/ 5;
+  -ms-grid-row: 22;
+  -ms-grid-row-span: 3;
+  grid-row: 22 / 25;
+}
+
+#social {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 4;
+  grid-column: 5/ 9;
+  -ms-grid-row: 22;
+  -ms-grid-row-span: 3;
+  grid-row: 22 / 25;
+}
+
+#location {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-column: 9/ 13;
+  -ms-grid-row: 22;
+  -ms-grid-row-span: 3;
+  grid-row: 22 / 25;
+}
+
+/*About Us Grids*/
+.abtUsTitle {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 11;
+  grid-column: 1 / 12;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+}
+
+.abtUsImage {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-column: 3 / 11;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 2;
+  grid-row: 7 / 9;
+}
+
+.abtUsLabel {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2 / 12;
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 1;
+  grid-row: 10 / 11;
+}
+
+.mission {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 13;
+  -ms-grid-row-span: 2;
+  grid-row: 13 / 15;
+}
+
+.vision {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 15;
+  -ms-grid-row-span: 3;
+  grid-row: 15 / 18;
+}
+
+.clientStories {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2 / 12;
+  -ms-grid-row: 19;
+  -ms-grid-row-span: 3;
+  grid-row: 19 / 22;
+}
+
+/*Contact Us Grids*/
+.contactUsTitle {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 11;
+  grid-column: 1 / 12;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 / 6;
+}
+
+.contactUsImg {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / 6;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 8;
+  grid-row: 7 / 15;
+}
+
+.contactUsForm {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 5;
+  grid-column: 7 / 12;
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 8;
+  grid-row: 7 / 15;
+}
+
+/*Products Grids*/
+.saleImage {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 4;
+  grid-row: 4 / 8;
+}
+
+#btnSouvenier {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1 / 7;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 1;
+  grid-row: 8 / 9;
+}
+
+#btnSeafood {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 6;
+  grid-column: 7 / 13;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 1;
+  grid-row: 8 / 9;
+}
+
+#seafoodText {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 11;
+  -ms-grid-row-span: 1;
+  grid-row: 11 / 12;
+}
+
+#seafoodProducts {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 12;
+  -ms-grid-row-span: 4;
+  grid-row: 12 / 16;
+}
+
+#souvenierText {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 17;
+  -ms-grid-row-span: 1;
+  grid-row: 17 / 18;
+}
+
+#souvenierProducts {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 18;
+  -ms-grid-row-span: 3;
+  grid-row: 18 / 21;
+}
+
+#seafoodProducts #sea1 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#seafoodProducts #sea2 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4 / 6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#seafoodProducts #sea3 {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-column: 6 / 8;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#seafoodProducts #sea4 {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 2;
+  grid-column: 8 / 10;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#seafoodProducts #sea5 {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 2;
+  grid-column: 10 / 12;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#seafoodProducts #sea6 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#seafoodProducts #sea7 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4 / 6;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#seafoodProducts #sea8 {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-column: 6 / 8;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#seafoodProducts #sea9 {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 2;
+  grid-column: 8 / 10;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#seafoodProducts #sea10 {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 2;
+  grid-column: 10 / 12;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#souvenierProducts #sou1 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#souvenierProducts #sou2 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4 / 6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#souvenierProducts #sou3 {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-column: 6 / 8;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#souvenierProducts #sou4 {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 2;
+  grid-column: 8 / 10;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#souvenierProducts #sou5 {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 2;
+  grid-column: 10 / 12;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+#souvenierProducts #sou6 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#souvenierProducts #sou7 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4 / 6;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#souvenierProducts #sou8 {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-column: 6 / 8;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#souvenierProducts #sou9 {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 2;
+  grid-column: 8 / 10;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+#souvenierProducts #sou10 {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 2;
+  grid-column: 10 / 12;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3 / 4;
+}
+
+/*ENDREGION*/
+/*REGION: Header and Nav*/
+#logo {
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ac0700;
+  background-size: contain;
+}
+
+#logoText {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 150%;
+  text-align: center;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#logoText a {
+  color: #fff;
+  font-weight: none;
+}
+
+#navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #ac0700;
+  padding-right: 5%;
+}
+
+.topnav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#navbar a {
+  color: #fff;
+  font-weight: bold;
+  font-size: none;
+  text-transform: uppercase;
+}
+
+nav li {
+  list-style-type: none;
+  margin-left: 20px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#navbar a:hover,
+#logoText a:hover {
+  text-decoration: underline;
+}
+
+.storyText a:hover {
+  color: #ac0700;
+}
+
+#navbar .active a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 300;
+}
+
+/*VALUE PREPOSITION*/
+#valuePrep {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #f6f1f1;
+  padding: 3em;
+}
+
+#valuePrep .valicon1 {
+  background-image: url("images/iconfamily.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 90%;
+  height: 159px;
+  text-align: center;
+}
+
+#valuePrep .valicon2 {
+  background-image: url("images/iconlocal.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 90%;
+  height: 159px;
+  text-align: center;
+}
+
+#valuePrep .valicon3 {
+  background-image: url("images/iconfresh.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 90%;
+  height: 159px;
+  text-align: center;
+}
+
+#valuePrep .val1 ul,
+.val2 ul,
+.val3 ul,
+#featured ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#valuePrep h3 {
+  text-align: center;
+}
+
+#valuePrep li {
+  text-align: center;
+  color: #ac0700;
+  font-family: "Montserrat", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-right: 1em;
+}
+
+/*FEATURED PRODUCTS*/
+#featured {
+  text-align: center;
+  padding: 2em;
+}
+
+#featured ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+a .featured1,
+a .featured2,
+a .featured3 {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 15em;
+}
+
+a .featured1 {
+  background-image: url(images/featured1.jpg);
+}
+
+a .featured2 {
+  background-image: url(images/featured2.jpg);
+}
+
+a .featured3 {
+  background-image: url(images/featured3.jpg);
+}
+
+#featured .emphasized {
+  font-weight: bold;
+}
+
+#featured button {
+  color: #fff;
+  font-size: 120%;
+  text-align: center;
+  padding: 10px 25px;
+  border: 2px solid #fff;
+  margin: 3%;
+  background-color: #004fac;
+  color: white;
+  display: inline-block;
+}
+
+/*OUR STORY*/
+.ownerpic {
+  background-image: url("images/ownerpic.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 30em;
+  margin: 0 auto;
+}
+
+.storypic, .storyText {
+  background-color: #f6f1f1;
+  padding: 2em;
+}
+
+.storyText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-size: 120%;
+}
+
+.storyText h2 {
+  text-align: center;
+}
+
+.storyText p {
+  text-align: justify;
+}
+
+/*TESTIMONIALS*/
+#testimonials {
+  padding: 3em;
+  padding-top: 2em;
+  text-align: center;
+}
+
+#testimonials h2 {
+  margin-bottom: 2em;
+}
+
+#testimonials q {
+  text-align: center;
+  color: #ac0700;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 120%;
+}
+
+#testimonials .client {
+  font-size: 80%;
+  font-weight: bold;
+  padding-top: 2%;
+}
+
+/*FOOTER*/
+#mailingList,
+#social,
+#location {
+  background-color: #f6f1f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 80%;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#mailingList h4,
+#mailingList p,
+#social h4,
+#location h4 {
+  margin: 0;
+  padding: 0;
+}
+
+#mailingList h4,
+#social h4,
+#location h4 {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+#mailingList input {
+  display: inline-block;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 0.5em;
+  height: 2em;
+}
+
+#mailingList button {
+  display: inline-block;
+  width: 60%;
+  margin: 0 auto;
+  background-color: #004fac;
+  border: none;
+  color: white;
+  padding: 3% 3%;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid #fff;
+  font-size: 130%;
+}
+
+.mailIcon, .connectIcon, .locationIcon {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 59px;
+  height: 57px;
+  margin: 0 auto;
+}
+
+.mailIcon {
+  background-image: url(images/iconmail.png);
+}
+
+.connectIcon {
+  background-image: url(images/iconconnect.png);
+}
+
+.locationIcon {
+  background-image: url(images/iconlocation.png);
+}
+
+.facebookIcon, .twitterIcon, .instagramIcon {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 35px;
+  height: 35px;
+  margin: 0 auto;
+}
+
+.facebookIcon {
+  background-image: url(images/iconfacebook.png);
+}
+
+.twitterIcon {
+  background-image: url(images/icontwitter.png);
+}
+
+.instagramIcon {
+  background-image: url(images/iconinstagram.png);
+}
+
+#social ul,
+#social ul {
+  margin: 0;
+  padding: 0;
+}
+
+#social ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#social ul li {
+  list-style-type: none;
+  margin: 0.5em;
+  text-align: center;
+}
+
+/*ABOUT US*/
+.abtUsTitle {
+  text-align: center;
+}
+
+.abtUsImage {
+  background-image: url("images/story.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 40em;
+  text-align: center;
+}
+
+.abtUsLabel {
+  text-align: justify;
+  font-size: 120%;
+  padding-top: 2%;
+}
+
+.mission,
+.vision {
+  text-align: center;
+  background-color: #f6f1f1;
+  padding: 5%;
+}
+
+.vision {
+  padding-top: 0;
+}
+
+.mission p,
+.vision p {
+  text-align: center;
+  color: #ac0700;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 150%;
+}
+
+.clientStories {
+  text-align: center;
+  padding: 2%;
+}
+
+.clientStories h2 {
+  padding-bottom: 2em;
+}
+
+.clientStories q {
+  text-align: center;
+  color: #ac0700;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2em;
+}
+
+.clientStories .client {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-top: 2%;
+}
+
+.quotes, .quotes2 {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 120px;
+  height: 80px;
+  background-image: url(images/quotes.png);
+  margin: 0 auto;
+}
+
+.quotes {
+  background-image: url(images/quotes.png);
+}
+
+.quotes2 {
+  background-image: url(images/quotes.png);
+}
+
+/* ABOUT US*/
+.contactUsImg {
+  background-image: url("images/contactus.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#name,
+#email,
+#phone,
+#message {
+  border: 3px solid #000;
+}
+
+#name,
+#email,
+#phone {
+  height: 2em;
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+#name {
+  margin-top: 5%;
+}
+
+#email {
+  height: 2em;
+  width: 100%;
+}
+
+#message {
+  width: 100%;
+}
+
+#contactSend {
+  background-color: #004fac;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-size: 120%;
+  border: 2px solid #fff;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+/*PRODUCTS*/
+.saleImage {
+  background-image: url("images/salebg.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-image: url(images/salebg.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.salePic {
+  width: 70%;
+  height: 95%;
+  padding-top: 3%;
+}
+
+.prodSelect {
+  background-color: #004fac;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-size: 120%;
+  border: 2px solid #fff;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  height: 150%;
+}
+
+#seafoodProducts {
+  background-color: #fff;
+  padding: 5%;
+}
+
+.prodArea img {
+  width: 90%;
+  height: 10em;
+  margin: 5%;
+}
+
+.prodArea p {
+  font-weight: bold;
+  text-align: center;
+}
+
+#seafoodText, #souvenierText {
+  background-color: #ff5f58;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 200%;
+  text-align: center;
+}
+
+#seafoodText p, #souvenierText p {
+  margin: 1%;
+  text-align: center;
+}
+
+#souvenierText {
+  background-color: #7ed957;
+}
+
+/*SLIDE SHOW*/
+.mySlides {
+  display: none;
+}
+
+.mySlidesQuotes {
+  display: none;
+}
+
+.mySlidesStories {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.slideshowContainerStories {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  background-color: #fff;
+}
+
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  background-color: #f6f1f1;
+}
+
+.slideshowContainerQuote {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  padding-top: 2em;
+}
+
+.callToAction {
+  color: #f2f2f2;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.callToAction button {
+  background-color: #004fac;
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.2em;
+  border: 2px solid #fff;
+}
+
+#salebutton {
+  background-color: #00ac5d;
+}
+
+.dot,
+.dot2,
+.dot3 {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*END REGION*/
+/*REGION - Media Queries*/
+/*For Extra Large Screen* -   850px to 32000px*/
+/* For Large Screen - laptops and deskstops, 769px and 815px */
+@media only screen and (min-width: 48.001em) and (max-width: 53.14em) {
+  .mailingList button {
+    font-size: 90%;
+  }
+  .abtUsImage {
+    height: 35em;
+  }
+  #name,
+  #email,
+  #phone,
+  #message {
+    border: 3px solid #000;
+  }
+  #name,
+  #email,
+  #phone {
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+  #name {
+    margin-top: 5%;
+  }
+  #email {
+    height: 2em;
+    width: 100%;
+  }
+  #message {
+    width: 100%;
+  }
+  #contactSend {
+    width: 100%;
+  }
+  #seafoodProducts #sea1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea2 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea3 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea5 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea6 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea7 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea8 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea9 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea10 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  #souvenierProducts #sou1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou2 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou3 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou5 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou6 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou7 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou8 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou9 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou10 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+}
+
+/* Medium devices - landscape tablets, 560px and 768px */
+@media only screen and (min-width: 44.68em) and (max-width: 48em) {
+  #logo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+  }
+  #logoText {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
+    grid-column: 5 / 7;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+    font-size: 120%;
+  }
+  #navbar {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+  }
+  #navbar ul {
+    font-size: 80%;
+  }
+  .storyText p {
+    font-size: 0.9em;
+  }
+  .mailingList button {
+    font-size: 85%;
+  }
+  #featured,
+  .storyText {
+    font-size: 90%;
+  }
+  .ownerpic {
+    height: 20em;
+  }
+  .abtUsImage {
+    height: 30em;
+  }
+  .contactUsTitle {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contactUsImg {
+    display: none;
+  }
+  .contactUsForm {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 8;
+    grid-column: 3 / 11;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 14;
+    grid-row: 7 / 21;
+  }
+  #name,
+  #email,
+  #phone,
+  #message {
+    border: 3px solid #000;
+  }
+  #name,
+  #email,
+  #phone {
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+  #name {
+    margin-top: 5%;
+  }
+  #email {
+    height: 2em;
+    width: 100%;
+  }
+  #message {
+    width: 100%;
+  }
+  #contactSend {
+    width: 100%;
+  }
+  #seafoodProducts #sea1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea2 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea3 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea5 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea6 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea7 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea8 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea9 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea10 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  #souvenierProducts #sou1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou2 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou3 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou5 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou6 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou7 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou8 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou9 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou10 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+}
+
+/* For small devices - phones  35.01 to 44.69/ 561px to 715px */
+@media only screen and (min-width: 35.01em) and (max-width: 44.69em) {
+  #logo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+  }
+  #logoText {
+    display: none;
+  }
+  #navbar {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 8;
+    grid-column: 5 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+  }
+  .storypic, .storyText {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 12;
+    -ms-grid-row-span: 2;
+    grid-row: 12 / 14;
+  }
+  .storyText {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 14;
+    -ms-grid-row-span: 3;
+    grid-row: 14 / 17;
+  }
+  #navbar ul {
+    font-size: 80%;
+  }
+  .storyText p {
+    font-size: 0.9em;
+  }
+  .mailingList button {
+    font-size: 80%;
+    font-weight: bold;
+    width: 50%;
+  }
+  #featured,
+  .storyText {
+    font-size: 100%;
+  }
+  #featured ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #featured ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 5%;
+  }
+  .ownerpic {
+    height: 20em;
+  }
+  .abtUsImage {
+    height: 20em;
+  }
+  .mission p,
+  .vision p {
+    font-size: 120%;
+  }
+  .abtUsLabel {
+    font-size: 110%;
+  }
+  #valuePrep {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #valuePrep li {
+    margin-bottom: 5%;
+  }
+  .contactUsTitle {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contactUsImg {
+    display: none;
+  }
+  .contactUsForm {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 8;
+    grid-column: 3 / 11;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 14;
+    grid-row: 7 / 21;
+  }
+  #name,
+  #email,
+  #phone,
+  #message {
+    border: 3px solid #000;
+  }
+  #name,
+  #email,
+  #phone {
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+  #name {
+    margin-top: 5%;
+  }
+  #email {
+    height: 2em;
+    width: 100%;
+  }
+  #message {
+    width: 100%;
+  }
+  #contactSend {
+    width: 100%;
+  }
+  #seafoodProducts #sea1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea2 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea3 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea5 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea6 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea7 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea8 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea9 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea10 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  #souvenierProducts #sou1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou2 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou3 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou5 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou6 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou7 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou8 {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5 / 9;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou9 {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 4;
+    grid-column: 9 / 13;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou10 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+}
+
+/* For extra small devices - phones  16px to 560px*/
+@media only screen and (min-width: 1em) and (max-width: 35em) {
+  #logo {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-column: 1 / 5;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+  }
+  #logoText {
+    display: none;
+  }
+  #navbar {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 8;
+    grid-column: 5 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1 / 4;
+  }
+  .storypic, .storyText {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 12;
+    -ms-grid-row-span: 2;
+    grid-row: 12 / 14;
+  }
+  .storyText {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 14;
+    -ms-grid-row-span: 3;
+    grid-row: 14 / 17;
+  }
+  #testimonials {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/ 13;
+    -ms-grid-row: 17;
+    -ms-grid-row-span: 5;
+    grid-row: 17 / 22;
+  }
+  #mailingList {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/ 13;
+    -ms-grid-row: 22;
+    -ms-grid-row-span: 1;
+    grid-row: 22 / 23;
+  }
+  #social {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/ 13;
+    -ms-grid-row: 23;
+    -ms-grid-row-span: 1;
+    grid-row: 23 / 24;
+  }
+  #location {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1/ 13;
+    -ms-grid-row: 24;
+    -ms-grid-row-span: 1;
+    grid-row: 24 / 25;
+  }
+  #navbar ul {
+    font-size: 70%;
+  }
+  #navbar ul li {
+    margin: 3%;
+    padding: 0;
+  }
+  .storyText p {
+    font-size: 0.9em;
+  }
+  .mailingList button {
+    font-size: 100%;
+    font-weight: bold;
+    width: 30%;
+  }
+  #featured,
+  .storyText {
+    font-size: 100%;
+  }
+  #featured ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #featured ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 5%;
+  }
+  #featured .emphasized {
+    font-weight: bold;
+  }
+  #valuePrep {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #valuePrep li {
+    margin-bottom: 5%;
+  }
+  .ownerpic {
+    height: 20em;
+  }
+  .abtUsImage {
+    height: 20em;
+  }
+  .callToAction button {
+    padding: 10px 25px;
+  }
+  .abtUsLabel {
+    font-size: 100%;
+  }
+  .mission p,
+  .vision p {
+    font-size: 110%;
+  }
+  /*Contact Us*/
+  .contactUsTitle {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contactUsImg {
+    display: none;
+  }
+  .contactUsForm {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 10;
+    grid-column: 2 / 12;
+    -ms-grid-row: 7;
+    -ms-grid-row-span: 14;
+    grid-row: 7 / 21;
+  }
+  #name,
+  #email,
+  #phone,
+  #message {
+    border: 3px solid #000;
+  }
+  #name,
+  #email,
+  #phone {
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+  #name {
+    margin-top: 5%;
+  }
+  #email {
+    height: 2em;
+    width: 100%;
+  }
+  #message {
+    width: 100%;
+  }
+  #contactSend {
+    width: 100%;
+  }
+  .topnav ul li {
+    display: none;
+  }
+  .topnav .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 10%;
+  }
+  #seafoodProducts #sea1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea2 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea4 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea5 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea6 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea7 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  #seafoodProducts #sea8 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  #seafoodProducts #sea9 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  #seafoodProducts #sea10 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  #souvenierProducts #sou1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou2 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou4 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou5 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou6 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou7 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  #souvenierProducts #sou8 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+  }
+  #souvenierProducts #sou9 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  #souvenierProducts #sou10 {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 6;
+    grid-column: 7 / 13;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5 / 6;
+  }
+  #btnSouvenier {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 1;
+    grid-row: 9 / 10;
+  }
+  #btnSeafood {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 10;
+    -ms-grid-row-span: 1;
+    grid-row: 10 / 11;
+  }
+  .prodSelect {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1em) and (max-width: 35em) {
+  .topnavresponsive ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: right;
+        -ms-flex-align: right;
+            align-items: right;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-right: 8%;
+    padding-left: 8%;
+    background-color: #621111;
+  }
+  .topnavresponsive ul li a {
+    font: #000;
+  }
+  .topnavresponsive .icon {
+    margin: 5%;
+  }
+  .saleImage {
+    background-image: url("images/sale300x40.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #f6f1f1;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .salePic {
+    display: none;
+  }
+  .saleImage {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 5;
+    grid-row: 4 / 9;
+  }
+  .prodSelect {
+    height: 100%;
+  }
+  #btnSouvenier {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 9;
+    -ms-grid-row-span: 1;
+    grid-row: 9 / 10;
+  }
+  #btnSeafood {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 10;
+    -ms-grid-row-span: 1;
+    grid-row: 10 / 11;
+  }
+  #seafoodText p, #souvenierText p {
+    font-size: 90%;
+  }
+  #mailingList button {
+    width: 60%;
+  }
+}
+
+/*END REGION*/
+/*# sourceMappingURL=ppstyle.css.map */

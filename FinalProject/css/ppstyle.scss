@@ -1,0 +1,1693 @@
+/*
+    Name: Susannie Vhil Tiempo
+    Last Update: March 27, 2020
+    Purpose: Style code for the Poseidon's Palace website.
+*/
+
+/*REGION: Variable Declaration*/
+$col1: #ac0700;
+$col2: #004fac;
+$col3: #f6f1f1;
+$col4: #00ac5d;
+$col5: #d9d9d9;
+$colwhite: #fff;
+$colblack: #000;
+$fontFamMain: "Montserrat", "Franklin Gothic Medium", "Arial Narrow", Arial,
+  sans-serif;
+$fontFamSecondary: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+  sans-serif;
+$textDeco: none;
+$box: border-box;
+$flex: flex;
+$center: center;
+$marginCen: 0 auto;
+/*ENDREGION*/
+
+/*REGION: Mixin Declaration*/
+@mixin reset() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin gridMain(
+  $display,
+  $column,
+  $row,
+  $maxWidth: null,
+  $overFlowX: null,
+  $margin: null
+) {
+  display: $display;
+  display: -ms-grid;
+  -ms-grid-columns: repeat((1fr, 12));
+  grid-template-columns: $column;
+  grid-auto-rows: $row;
+  overflow-x: $overFlowX;
+  margin: $margin;
+}
+
+@mixin font(
+  $color: null,
+  $fWeight: null,
+  $fSize: null,
+  $textAlign: null,
+  $textDecoration: null
+) {
+  color: $color;
+  font-weight: $fWeight;
+  font-size: $fSize;
+  text-align: $textAlign;
+  text-decoration: $textDecoration;
+}
+@mixin display(
+  $display,
+  $alignitem: null,
+  $justifycontent: null,
+  $direction: null
+) {
+  display: $flex;
+  align-items: $alignitem;
+  justify-content: $justifycontent;
+  flex-direction: $direction;
+}
+
+@mixin background-image(
+  $img: null,
+  $bgpos: null,
+  $bgcolor: null,
+  $bgsize: null,
+  $width: null,
+  $height: null
+) {
+  background-image: url($img);
+  background-repeat: no-repeat;
+  background-position: $bgpos;
+  background-color: $bgcolor;
+  background-size: $bgsize;
+  width: $width;
+  height: $height;
+}
+
+/*ENDREGION*/
+
+/*REGION: Default Style*/
+* {
+  @include reset();
+  box-sizing: $box;
+  font-family: $fontFamMain;
+}
+/*ENDREGION*/
+
+/*REGION: Grid Declaration*/
+#wrapper {
+  @include gridMain(
+    grid,
+    repeat(12, 1fr),
+    minmax(30px, auto),
+    2000px,
+    hidden,
+    $marginCen
+  );
+}
+
+header {
+  @include gridMain(
+    grid,
+    repeat(12, 1fr),
+    minmax(30px, auto),
+    hidden,
+    $marginCen
+  );
+  background-color: $col1;
+  width: 100%;
+}
+
+#seafoodProducts,
+#souvenierProducts {
+  @include gridMain(
+    grid,
+    repeat(12, 1fr),
+    minmax(30px, auto),
+    hidden,
+    $marginCen
+  );
+  width: 100%;
+}
+/*ENDREGION*/
+
+/*REGION: Default Grids*/
+/*Index Grids*/
+header {
+  grid-column: 1 / 13;
+  grid-row: 1 / 4;
+}
+
+#logo {
+  grid-column: 1 / 3;
+  grid-row: 1 / 4;
+}
+
+#logoText {
+  grid-column: 3 / 5;
+  grid-row: 1 / 4;
+}
+
+#navbar {
+  grid-column: 5 / 13;
+  grid-row: 1 / 4;
+}
+
+#main {
+  grid-column: 2 / 12;
+  grid-row: 5 / 7;
+}
+
+#valuePrep {
+  grid-column: 1 / 13;
+  grid-row: 7 / 9;
+}
+
+#featured {
+  grid-column: 1 / 13;
+  grid-row: 9 / 12;
+}
+.storypic {
+  grid-column: 1 / 6;
+  grid-row: 12 / 17;
+}
+
+.storyText {
+  grid-column: 6 / 13;
+  grid-row: 12 / 17;
+}
+#testimonials {
+  grid-column: 1/ 13;
+  grid-row: 17 / 22;
+}
+#mailingList {
+  grid-column: 1/ 5;
+  grid-row: 22 / 25;
+}
+#social {
+  grid-column: 5/ 9;
+  grid-row: 22 / 25;
+}
+#location {
+  grid-column: 9/ 13;
+  grid-row: 22 / 25;
+}
+
+/*About Us Grids*/
+
+.abtUsTitle {
+  grid-column: 1 / 12;
+  grid-row: 5 / 6;
+}
+
+.abtUsImage {
+  grid-column: 3 / 11;
+  grid-row: 7 / 9;
+}
+
+.abtUsLabel {
+  grid-column: 2 / 12;
+  grid-row: 10 / 11;
+}
+
+.mission {
+  grid-column: 1 / 13;
+  grid-row: 13 / 15;
+}
+
+.vision {
+  grid-column: 1 / 13;
+  grid-row: 15 / 18;
+}
+
+.clientStories {
+  grid-column: 2 / 12;
+  grid-row: 19 / 22;
+}
+
+/*Contact Us Grids*/
+.contactUsTitle {
+  grid-column: 1 / 12;
+  grid-row: 5 / 6;
+}
+
+.contactUsImg {
+  grid-column: 2 / 6;
+  grid-row: 7 / 15;
+}
+
+.contactUsForm {
+  grid-column: 7 / 12;
+  grid-row: 7 / 15;
+}
+
+/*Products Grids*/
+
+.saleImage{
+  grid-column: 1 / 13;
+  grid-row: 4 / 8;
+}
+#btnSouvenier{
+  grid-column: 1 / 7;
+  grid-row: 8 / 9;
+}
+#btnSeafood{
+  grid-column: 7 / 13;
+  grid-row: 8 / 9;
+}
+#seafoodText{
+  grid-column: 1 / 13;
+  grid-row: 11 / 12;
+}
+#seafoodProducts{
+  grid-column: 1 / 13;
+  grid-row: 12 / 16;
+}
+#souvenierText{
+  grid-column: 1 / 13;
+  grid-row: 17 / 18;
+}
+#souvenierProducts{
+  grid-column: 1 / 13;
+  grid-row: 18 / 21;
+}
+
+#seafoodProducts #sea1{
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+}
+#seafoodProducts #sea2{
+  grid-column: 4 / 6;
+  grid-row: 1 / 2;
+}
+#seafoodProducts #sea3{
+  grid-column: 6 / 8;
+  grid-row: 1 / 2;
+}
+#seafoodProducts #sea4{
+  grid-column: 8 / 10;
+  grid-row: 1 / 2;
+}
+#seafoodProducts #sea5{
+  grid-column: 10 / 12;
+  grid-row: 1 / 2;
+}
+#seafoodProducts #sea6{
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+#seafoodProducts #sea7{
+  grid-column: 4 / 6;
+  grid-row: 3 / 4;
+}
+#seafoodProducts #sea8{
+  grid-column: 6 / 8;
+  grid-row: 3 / 4;
+}
+#seafoodProducts #sea9{
+  grid-column: 8 / 10;
+  grid-row: 3 / 4;
+}
+#seafoodProducts #sea10{
+  grid-column: 10 / 12;
+  grid-row: 3 / 4;
+}
+
+#souvenierProducts #sou1{
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+}
+#souvenierProducts #sou2{
+  grid-column: 4 / 6;
+  grid-row: 1 / 2;
+}
+#souvenierProducts #sou3{
+  grid-column: 6 / 8;
+  grid-row: 1 / 2;
+}
+#souvenierProducts #sou4{
+  grid-column: 8 / 10;
+  grid-row: 1 / 2;
+}
+#souvenierProducts #sou5{
+  grid-column: 10 / 12;
+  grid-row: 1 / 2;
+}
+#souvenierProducts #sou6{
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+#souvenierProducts #sou7{
+  grid-column: 4 / 6;
+  grid-row: 3 / 4;
+}
+#souvenierProducts #sou8{
+  grid-column: 6 / 8;
+  grid-row: 3 / 4;
+}
+#souvenierProducts #sou9{
+  grid-column: 8 / 10;
+  grid-row: 3 / 4;
+}
+#souvenierProducts #sou10{
+  grid-column: 10 / 12;
+  grid-row: 3 / 4;
+}
+/*ENDREGION*/
+
+/*REGION: Header and Nav*/
+#logo {
+  @include background-image("images/logo.png", center, $col1, contain);
+}
+
+#logoText {
+  @include font($colwhite, bolder, 150%, center, none);
+  @include display(
+    flex,
+    $alignitem: center,
+    $justifycontent: null,
+    $direction: null
+  );
+}
+
+#logoText a {
+  @include font($colwhite, none);
+}
+
+#navbar {
+  @include display(
+    flex,
+    $alignitem: null,
+    $justifycontent: flex-end,
+    $direction: null
+  );
+  background-color: $col1;
+  padding-right: 5%;
+}
+
+.topnav ul {
+  @include display(flex, center, flex-end, row);
+}
+
+#navbar a {
+  @include font($colwhite, bold, none);
+  text-transform: uppercase;
+}
+
+nav li {
+  list-style-type: none;
+  margin-left: 20px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#navbar a:hover,
+#logoText a:hover {
+  text-decoration: underline;
+}
+
+.storyText a:hover {
+  color: $col1;
+}
+
+#navbar .active a {
+  text-decoration: underline;
+  color: $colwhite;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 300;
+}
+
+/*VALUE PREPOSITION*/
+#valuePrep {
+  @include display(
+    flex,
+    $alignitem: null,
+    $justifycontent: space-evenly,
+    $direction: null
+  );
+  background-color: $col3;
+  padding: 3em;
+}
+
+#valuePrep .valicon1 {
+  @include background-image(
+    'images/iconfamily.png',
+    $bgpos: center,
+    $bgcolor: null,
+    $bgsize: contain,
+    $width: 90%,
+    $height: 159px
+  );
+  text-align: center;
+}
+#valuePrep .valicon2 {
+  @include background-image(
+    "images/iconlocal.png",
+    $bgpos: center,
+    $bgcolor: null,
+    $bgsize: contain,
+    $width: 90%,
+    $height: 159px
+  );
+  text-align: center;
+}
+#valuePrep .valicon3 {
+  @include background-image(
+    "images/iconfresh.png",
+    $bgpos: center,
+    $bgcolor: null,
+    $bgsize: contain,
+    $width: 90%,
+    $height: 159px
+  );
+  text-align: center;
+}
+
+#valuePrep .val1 ul,
+.val2 ul,
+.val3 ul,
+#featured ul li {
+  list-style-type: none;
+  @include reset();
+}
+#valuePrep h3 {
+  text-align: center;
+}
+#valuePrep li {
+  text-align: center;
+  color: $col1;
+  font-family: $fontFamMain;
+  margin-right: 1em;
+}
+
+/*FEATURED PRODUCTS*/
+#featured {
+  text-align: center;
+  padding: 2em;
+}
+#featured ul {
+  @include display(
+    flex,
+    $alignitem: null,
+    $justifycontent: space-evenly,
+    $direction: row
+  );
+}
+
+a .featured1,
+a .featured2,
+a .featured3 {
+  @include background-image(
+    $img: null,
+    $bgpos: center,
+    $bgcolor: null,
+    $bgsize: cover,
+    $width: 100%,
+    $height: 15em
+  );
+}
+a .featured1 {
+  background-image: url(images/featured1.jpg);
+}
+a .featured2 {
+  background-image: url(images/featured2.jpg);
+}
+
+a .featured3 {
+  background-image: url(images/featured3.jpg);
+}
+
+#featured .emphasized {
+  font-weight: bold;
+}
+#featured button {
+  @include font(
+    $colwhite,
+    $fWeight: null,
+    $fSize: 120%,
+    $textAlign: center,
+    $textDecoration: null
+  );
+  padding: 10px 25px;
+  border: 2px solid #fff;
+  margin: 3%;
+  background-color: #004fac;
+  color: white;
+  display: inline-block;
+
+}
+
+
+/*OUR STORY*/
+.ownerpic {
+  @include background-image('images/ownerpic.jpg',$bgpos:center,$bgcolor:null, $bgsize:cover, $width:100%, $height:30em);
+  margin: $marginCen;
+}
+.storypic {
+  background-color: $col3;
+  padding: 2em;
+}
+.storyText {
+  @extend .storypic;
+  @include display(flex, $alignitem:null, $justifycontent:space-evenly, $direction:column);
+  text-align: center;
+  font-size: 120%;
+}
+.storyText h2 {
+  text-align: center;
+}
+.storyText p {
+  text-align: justify;
+}
+
+
+/*TESTIMONIALS*/
+#testimonials {
+  padding: 3em;
+  padding-top: 2em;
+  text-align: center;
+}
+#testimonials h2 {
+  margin-bottom: 2em;
+}
+#testimonials q {
+  text-align: center;
+  color: $col1;
+  font-family: $fontFamSecondary;
+  font-size: 120%;
+}
+#testimonials .client {
+  font-size: 80%;
+  font-weight: bold;
+  padding-top: 2%;
+}
+
+/*FOOTER*/
+#mailingList,
+#social,
+#location {
+  background-color:$col3;
+  @include display(flex, $alignitem:null, $justifycontent:start, $direction:column);
+  @include font($color:null, $fWeight:null, $fSize:80%, $textAlign:center, $textDecoration:null); 
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+#mailingList h4,
+#mailingList p,
+#social h4,
+#location h4 {
+@include reset();
+}
+#mailingList h4,
+#social h4,
+#location h4 {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+#mailingList input {
+  display: inline-block;
+  width: 70%;
+  margin: $marginCen;
+  text-align: center;
+  margin-top: 0.5em;
+  height: 2em;
+}
+#mailingList button {
+  display: inline-block;
+  width: 60%;
+  margin: 0 auto;
+  background-color: $col2;
+  border: none;
+  color: white;
+  padding: 3% 3%;
+  text-align: center;
+  display: inline-block;
+  border: 2px solid #fff;
+  font-size: 130%;
+}
+.mailIcon, .connectIcon, .locationIcon {
+  @include background-image($img:null,$bgpos:center,$bgcolor:null, $bgsize:cover, $width:59px, $height:57px);
+  margin: $marginCen;
+}
+
+.mailIcon {
+  background-image: url(images/iconmail.png);
+}
+.connectIcon {
+  background-image: url(images/iconconnect.png);
+}
+.locationIcon {
+  background-image: url(images/iconlocation.png);
+}
+.facebookIcon, .twitterIcon, .instagramIcon {
+  @include background-image($img:null,$bgpos:center,$bgcolor:null, $bgsize:cover, $width:35px, $height:35px);
+  margin: $marginCen;
+}
+
+.facebookIcon {
+  background-image: url(images/iconfacebook.png);
+}
+.twitterIcon {
+  background-image: url(images/icontwitter.png);
+}
+.instagramIcon {
+  background-image: url(images/iconinstagram.png);
+}
+#social ul,
+#social ul {
+  margin: 0;
+  padding: 0;
+}
+#social ul {
+  @include display(flex, $alignitem:null, $justifycontent:center, $direction:row);
+}
+#social ul li {
+  list-style-type: none;
+  margin: 0.5em;
+  text-align: center;
+}
+
+/*ABOUT US*/
+
+.abtUsTitle {
+  text-align: center;
+}
+.abtUsImage {
+  @include background-image('images/story.jpg',$bgpos:center,$bgcolor:null, $bgsize:cover, $width:100%, $height:40em);
+  text-align: center;
+}
+.abtUsLabel {
+  text-align: justify;
+  font-size: 120%;
+  padding-top: 2%;
+}
+.mission,
+.vision {
+  text-align: center;
+  background-color: #f6f1f1;
+  padding: 5%;
+}
+.vision {
+  padding-top: 0;
+}
+.mission p,
+.vision p {
+  text-align: center;
+  color: $col1;
+  font-family: $fontFamSecondary;
+  font-size: 150%;
+}
+.clientStories {
+  text-align: center;
+  padding: 2%;
+}
+.clientStories h2 {
+  padding-bottom: 2em;
+}
+.clientStories q {
+  text-align: center;
+  color: $col1;
+  font-family: $fontFamSecondary;
+  font-size: 1.2em;
+}
+.clientStories .client {
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-top: 2%;
+}
+.quotes, .quotes2 {
+  @include background-image($img:null,$bgpos:center,$bgcolor:null, $bgsize:contain, $width:120px, $height:80px);
+  background-image: url(images/quotes.png);
+  margin: $marginCen;
+}
+.quotes {
+  background-image: url(images/quotes.png);
+}
+.quotes2 {
+  background-image: url(images/quotes.png);
+}
+
+/* ABOUT US*/
+.contactUsImg {
+  @include background-image('images/contactus.jpg',$bgpos:top,$bgcolor:null, $bgsize:contain, $width:100%, $height:100%);
+  margin: $marginCen;
+}
+
+h1 {
+  text-align: center;
+}
+#name,
+#email,
+#phone,
+#message {
+  border: 3px solid #000;
+}
+#name,
+#email,
+#phone {
+  height: 2em;
+  width: 100%;
+  margin-bottom: 1%;
+}
+#name {
+  margin-top: 5%;
+}
+#email {
+  height: 2em;
+  width: 100%;
+}
+
+#message {
+  width: 100%;
+}
+
+#contactSend {
+  background-color: $col2;
+  color: $colwhite;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-size: 120%;
+  border: 2px solid $colwhite;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+}
+
+/*PRODUCTS*/
+.saleImage {
+  @include background-image('images/salebg.png',$bgpos:top,$bgcolor:null, $bgsize:cover, $width:100%, $height:100%);
+  background-image: url(images/salebg.png);
+  display: flex;
+  justify-content: space-around;
+}
+
+.salePic{
+  width: 70%;
+  height: 95%;
+  padding-top: 3%;
+}
+
+.prodSelect{
+  background-color: $col2;
+  color: $colwhite;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-size: 120%;
+  border: 2px solid $colwhite;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  height: 150%;
+}
+
+#seafoodProducts{
+  background-color: $colwhite;
+  padding: 5%;
+}
+.prodArea img{
+  width: 90%;
+  height: 10em;
+  margin: 5%;
+}
+.prodArea p{
+  font-weight: bold;
+  text-align: center;
+}
+#seafoodText, #souvenierText{
+  background-color: #ff5f58 ;
+  @include font($colwhite, $fWeight:bolder, $fSize:200%, $textAlign:center, $textDecoration:null); 
+}
+#seafoodText p, #souvenierText p{
+  margin: 1%;
+  text-align: center;
+}
+#souvenierText {
+  background-color: #7ed957 ;
+}
+
+/*SLIDE SHOW*/
+.mySlides {
+  display: none;
+}
+.mySlidesQuotes {
+  display: none;
+}
+.mySlidesStories {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+.slideshowContainerStories {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  background-color: #fff;
+}
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  background-color: #f6f1f1;
+}
+.slideshowContainerQuote {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  padding-top: 2em;
+}
+.callToAction {
+  color: #f2f2f2;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+}
+.callToAction button {
+  background-color: $col2;
+  border: none;
+  color: $colwhite;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.2em;
+  border: 2px solid $colwhite;
+}
+#salebutton {
+  background-color: $col4;
+}
+.dot,
+.dot2,
+.dot3 {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*END REGION*/
+
+/*REGION - Media Queries*/
+
+/*For Extra Large Screen* -   850px to 32000px*/
+@media only screen and (min-width: 53.13em) and (max-width: 2000em) {
+
+}
+
+/* For Large Screen - laptops and deskstops, 769px and 815px */
+@media only screen and (min-width: 48.001em) and (max-width: 53.14em) {
+  .mailingList button {
+    font-size: 90%;
+  }
+  
+  .abtUsImage {
+    height: 35em;
+  }
+
+  #name,
+  #email,
+  #phone,
+  #message {
+    border: 3px solid $colblack;
+  }
+  #name,
+  #email,
+  #phone {
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+
+  #name {
+    margin-top: 5%;
+  }
+
+  #email {
+    height: 2em;
+    width: 100%;
+  }
+
+  #message {
+    width: 100%;
+  }
+
+  #contactSend {
+    width: 100%;
+  }
+
+  #seafoodProducts #sea1{
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+
+  #seafoodProducts #sea2{
+    grid-column: 5 / 9;
+    grid-row: 1 / 2;
+  }
+
+  #seafoodProducts #sea3{
+    grid-column: 9 / 13;
+    grid-row: 1 / 2;
+  }
+
+  #seafoodProducts #sea4{
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+  }
+
+  #seafoodProducts #sea5{
+    grid-column: 5 / 9;
+    grid-row: 2 / 3;
+  }
+
+  #seafoodProducts #sea6{
+    grid-column: 9 / 13;
+    grid-row: 2 / 3;
+  }
+
+  #seafoodProducts #sea7{
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+
+  }
+
+  #seafoodProducts #sea8{
+    grid-column: 5 / 9;
+    grid-row: 3 / 4;
+  }
+
+  #seafoodProducts #sea9{
+    grid-column: 9 / 13;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea10{
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+
+  #souvenierProducts #sou1{
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou2{
+    grid-column: 5 / 9;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou3{
+    grid-column: 9 / 13;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou4{
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou5{
+    grid-column: 5 / 9;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou6{
+    grid-column: 9 / 13;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou7{
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou8{
+    grid-column: 5 / 9;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou9{
+    grid-column: 9 / 13;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou10{
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+}
+
+/* Medium devices - landscape tablets, 560px and 768px */
+
+@media only screen and (min-width: 44.68em) and (max-width: 48em) {
+  #logo {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+  }
+  #logoText {
+    grid-column: 5 / 7;
+    grid-row: 1 / 4;
+    font-size: 120%;
+  }
+  #navbar {
+    grid-column: 7 / 13;
+    grid-row: 1 / 4;
+  }
+  #navbar ul {
+    font-size: 80%;
+  }
+  .storyText p {
+    font-size: 0.9em;
+  }
+  .mailingList button {
+    font-size: 85%;
+  }
+  #featured,
+  .storyText {
+    font-size: 90%;
+  }
+  .ownerpic {
+    height: 20em;
+  }
+  .abtUsImage {
+    height: 30em;
+  }
+  .contactUsTitle {
+    grid-column: 1 / 13;
+    grid-row: 5 / 6;
+    display: flex;
+    justify-content: center;
+  }
+  .contactUsImg {
+    display: none;
+  }
+  .contactUsForm {
+    grid-column: 3 / 11;
+    grid-row: 7 / 21;
+  }
+  #name,
+  #email,
+  #phone,
+  #message {
+    border: 3px solid $colblack;
+  }
+  #name,
+  #email,
+  #phone {
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+  #name {
+    margin-top: 5%;
+  }
+  #email {
+    height: 2em;
+    width: 100%;
+  }
+  #message {
+    width: 100%;
+  }
+  #contactSend {
+    width: 100%;
+  }
+  #seafoodProducts #sea1{
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea2{
+    grid-column: 5 / 9;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea3{
+    grid-column: 9 / 13;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea4{
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea5{
+    grid-column: 5 / 9;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea6{
+    grid-column: 9 / 13;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea7{
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea8{
+    grid-column: 5 / 9;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea9{
+    grid-column: 9 / 13;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea10{
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+  #souvenierProducts #sou1{
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou2{
+    grid-column: 5 / 9;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou3{
+    grid-column: 9 / 13;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou4{
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou5{
+    grid-column: 5 / 9;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou6{
+    grid-column: 9 / 13;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou7{
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou8{
+    grid-column: 5 / 9;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou9{
+    grid-column: 9 / 13;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou10{
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+}
+
+
+/* For small devices - phones  35.01 to 44.69/ 561px to 715px */
+@media only screen and (min-width: 35.01em) and (max-width: 44.69em) {
+  #logo {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+  }
+  #logoText {
+    display: none;
+  }
+  #navbar {
+    grid-column: 5 / 13;
+    grid-row: 1 / 4;
+  }
+  .storypic {
+    grid-column: 1 / 13;
+    grid-row: 12 / 14;
+  }
+  .storyText {
+    grid-column: 1 / 13;
+    grid-row: 14 / 17;
+  }
+  #navbar ul {
+    font-size: 80%;
+  }
+  .storyText p {
+    font-size: 0.9em;
+  }
+  .mailingList button {
+    font-size: 80%;
+    font-weight: bold;
+    width: 50%;
+  }
+  #featured,
+  .storyText {
+    font-size: 100%;
+  }
+
+  #featured ul {
+    display: flex;
+    flex-direction: column;
+  }
+  #featured ul li {
+    @include reset();
+    list-style-type: none;
+    margin-bottom: 5%;
+  }
+  .ownerpic {
+    height: 20em;
+  }
+  .abtUsImage {
+    height: 20em;
+  }
+  .mission p,
+  .vision p {
+    font-size: 120%;
+  }
+  .abtUsLabel {
+    font-size: 110%;
+  }
+  #valuePrep {
+    @include display(flex,  $alignitem:center , $justifycontent:null, $direction:column);
+  }
+  #valuePrep li {
+    margin-bottom: 5%;
+  }
+  .contactUsTitle {
+    grid-column: 1 / 13;
+    grid-row: 5 / 6;
+    display: flex;
+    justify-content: center;
+  }
+  .contactUsImg {
+    display: none;
+  }
+  .contactUsForm {
+    grid-column: 3 / 11;
+    grid-row: 7 / 21;
+  }
+  #name,
+  #email,
+  #phone,
+  #message {
+    border: 3px solid $colblack;
+  }
+  #name,
+  #email,
+  #phone {
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+  #name {
+    margin-top: 5%;
+  }
+  #email {
+    height: 2em;
+    width: 100%;
+  }
+  #message {
+    width: 100%;
+  }
+  #contactSend {
+    width: 100%;
+  }
+  #seafoodProducts #sea1{
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea2{
+    grid-column: 5 / 9;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea3{
+    grid-column: 9 / 13;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea4{
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea5{
+    grid-column: 5 / 9;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea6{
+    grid-column: 9 / 13;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea7{
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea8{
+    grid-column: 5 / 9;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea9{
+    grid-column: 9 / 13;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea10{
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+  #souvenierProducts #sou1{
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou2{
+    grid-column: 5 / 9;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou3{
+    grid-column: 9 / 13;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou4{
+    grid-column: 1 / 5;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou5{
+    grid-column: 5 / 9;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou6{
+    grid-column: 9 / 13;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou7{
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou8{
+    grid-column: 5 / 9;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou9{
+    grid-column: 9 / 13;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou10{
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+}
+
+/* For extra small devices - phones  16px to 560px*/
+@media only screen and (min-width: 1em) and (max-width: 35em) {
+  #logo {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+  }
+  #logoText {
+    display: none;
+  }
+  #navbar {
+    grid-column: 5 / 13;
+    grid-row: 1 / 4;
+  }
+  .storypic {
+    grid-column: 1 / 13;
+    grid-row: 12 / 14;
+  }
+  .storyText {
+    grid-column: 1 / 13;
+    grid-row: 14 / 17;
+  }
+  #testimonials {
+    grid-column: 1/ 13;
+    grid-row: 17 / 22;
+  }
+  #mailingList {
+    grid-column: 1/ 13;
+    grid-row: 22 / 23;
+  }
+  #social {
+    grid-column: 1/ 13;
+    grid-row: 23 / 24;
+  }
+  #location {
+    grid-column: 1/ 13;
+    grid-row: 24 / 25;
+  }
+  #navbar ul {
+    font-size: 70%;
+  }
+  #navbar ul li {
+    margin: 3%;
+    padding: 0;
+  }
+  .storyText p {
+    font-size: 0.9em;
+  }
+  .mailingList button {
+    font-size: 100%;
+    font-weight: bold;
+    width: 30%;
+  }
+  #featured,
+  .storyText {
+    font-size: 100%;
+  }
+  #featured ul {
+    display: flex;
+    flex-direction: column;
+  }
+  #featured ul li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 5%;
+  }
+  #featured .emphasized {
+    font-weight: bold;
+  }
+  #valuePrep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #valuePrep li {
+    margin-bottom: 5%;
+  }
+  .ownerpic {
+    height: 20em;
+  }
+  .abtUsImage {
+    height: 20em;
+  }
+  .callToAction button {
+    padding: 10px 25px;
+  }
+  .abtUsLabel {
+    font-size: 100%;
+  }
+  .mission p,
+  .vision p {
+    font-size: 110%;
+  }
+  /*Contact Us*/
+  .contactUsTitle {
+    grid-column: 1 / 13;
+    grid-row: 5 / 6;
+    display: flex;
+    justify-content: center;
+  }
+  .contactUsImg {
+    display: none;
+  }
+  .contactUsForm {
+    grid-column: 2 / 12;
+    grid-row: 7 / 21;
+  }
+  #name,
+  #email,
+  #phone,
+  #message {
+    border: 3px solid #000;
+  }
+  #name,
+  #email,
+  #phone {
+    height: 2em;
+    width: 100%;
+    margin-bottom: 1%;
+  }
+  #name {
+    margin-top: 5%;
+  }
+  #email {
+    height: 2em;
+    width: 100%;
+  }
+  #message {
+    width: 100%;
+  }
+  #contactSend {
+    width: 100%;
+  }
+  .topnav ul li {
+    display: none;
+  }
+  .topnav .icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10%;
+  }
+
+  #seafoodProducts #sea1{
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea2{
+    grid-column: 7 / 13;
+    grid-row: 1 / 2;
+  }
+  #seafoodProducts #sea3{
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea4{
+    grid-column: 7 / 13;
+    grid-row: 2 / 3;
+  }
+  #seafoodProducts #sea5{
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea6{
+    grid-column: 7 / 13;
+    grid-row: 3 / 4;
+  }
+  #seafoodProducts #sea7{
+    grid-column: 1 / 7;
+    grid-row: 4 / 5;
+  }
+  #seafoodProducts #sea8{
+    grid-column: 7 / 13;
+    grid-row: 4 / 5;
+  }
+  #seafoodProducts #sea9{
+    grid-column: 1 / 7;
+    grid-row: 5 / 6;
+  }
+  #seafoodProducts #sea10{
+    grid-column: 7 / 13;
+    grid-row: 5 / 6;
+  }
+
+  #souvenierProducts #sou1{
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou2{
+    grid-column: 7 / 13;
+    grid-row: 1 / 2;
+  }
+  #souvenierProducts #sou3{
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou4{
+    grid-column: 7 / 13;
+    grid-row: 2 / 3;
+  }
+  #souvenierProducts #sou5{
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou6{
+    grid-column: 7 / 13;
+    grid-row: 3 / 4;
+  }
+  #souvenierProducts #sou7{
+    grid-column: 1 / 7;
+    grid-row: 4 / 5;
+  }
+  #souvenierProducts #sou8{
+    grid-column: 7 / 13;
+    grid-row: 4 / 5;
+  }
+  #souvenierProducts #sou9{
+    grid-column: 1 / 7;
+    grid-row: 5 / 6;
+  }
+  #souvenierProducts #sou10{
+    grid-column: 7 / 13;
+    grid-row: 5 / 6;
+  }
+  #btnSouvenier{
+    grid-column: 1 / 13;
+    grid-row: 9 / 10;
+  }
+  #btnSeafood{
+    grid-column: 1 / 13;
+    grid-row: 10 / 11;
+
+  }
+  .prodSelect{
+    height: 100%;
+  }
+}
+
+
+@media only screen and (min-width: 1em) and (max-width: 35em) {
+  .topnavresponsive ul {
+    @include display(flex,  $alignitem:right , $justifycontent:space-evenly, $direction:column);
+    padding-right: 8%;
+    padding-left: 8%;
+    background-color: #621111;
+  }
+  .topnavresponsive ul li a {
+    font: $colblack;
+  }
+  .topnavresponsive .icon {
+    margin: 5%;
+  }
+.saleImage {
+    @include background-image('images/sale300x40.png',$bgpos:top,$bgcolor:$col3, $bgsize:cover, $width:100%, $height:100%);
+  }
+  .salePic{
+    display: none;
+  }
+  .saleImage{
+    grid-column: 1 / 13;
+    grid-row: 4 / 9;
+  }
+  .prodSelect{
+    height: 100%;
+  }
+  #btnSouvenier{
+    grid-column: 1 / 13;
+    grid-row: 9 / 10;
+  }
+  #btnSeafood{
+    grid-column: 1 / 13;
+    grid-row: 10 / 11;
+
+  }
+  #seafoodText p,  #souvenierText p{
+    font-size: 90%;
+  }
+  #mailingList button {
+    width: 60%;
+  }
+}
+/*END REGION*/

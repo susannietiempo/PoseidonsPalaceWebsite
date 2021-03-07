@@ -1,0 +1,213 @@
+<!--
+    Name: Susannie Vhil Tiempo
+    Last Update: March 08, 2020
+    Purpose: HTML code for the Poseidon's Palace website - Home page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page - Poseidon's Palace</title>
+    <link rel="stylesheet" href="css/ppstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="ppJsMain.js" defer></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <div id="logo"> <!--Logo here!--></div>
+        <div id="logoText"><a href="index.html">Poseidon's Palace</a></div>
+         <nav id="navbar"  class="topnav">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+            <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+            <i class="fa fa-bars"></i> </a> 
+        </nav>
+      </header>
+      <div id="main">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="css/images/sslobster.jpg" style="width:100%" />
+            <div class="callToAction">
+              <button type="button" class="button" id="seafood" onclick="changePage('products.html#seafoodText')" onmouseover="changeButton1(this.id,'#004fac')" onmouseout="changeBackButton1(this.id,'#004fac')">Explore our Seafood</button>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="css/images/ssstore.jpg" style="width:100%" />   
+            <div class="callToAction">
+              <button type="button" class="button" id="souveniers" onclick="changePage('products.html#souvenierText')" onmouseover="changeButton1(this.id,'#004fac')" onmouseout="changeBackButton1(this.id,'#004fac')">
+                Explore our Souveniers
+              </button>
+            </div>
+          </div>
+          <div class="mySlides fade">
+            <img src="css/images/ssboat.jpg" style="width:100%" />
+            <div class="callToAction">
+              <button type="button" id="salebutton"  onclick="changePage('products.html')" onmouseover="changeButton1(this.id,'#00ac5d')" onmouseout="changeBackButton1(this.id,'#00ac5d')">On Sale!</button>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <!-- End of slideshow container -->
+
+      <section id="valuePrep">
+        <div class="val1">
+          <div class="valicon1"><!-- Icon here! --></div>
+          <h3>Family Owned</h3>
+          <ul>
+            <li>We are a family owned and operated business.</li>
+            <li>Our staff is your family!</li>
+          </ul>
+        </div>
+        <div class="val2">
+          <div class="valicon2"><!-- Icon here! --></div>
+          <h3>Locally Sourced</h3>
+          <ul>
+            <li>Our products come from local fishers and artisans.</li>
+            <li>You help promote local marine culture! </li>
+          </ul>
+        </div>
+        <div class="val3">
+          <div class="valicon3"><!-- Icon here! --></div>
+          <h3>Always Fresh</h3>
+          <ul>
+            <li>Our products are always fresh.</li>
+            <li>You enjoy sea-licious food!</li>
+          </ul>
+        </div>
+      </section>
+      <!-- End of value prep -->
+      <div id="featured">
+        <h2>Featured Products</h2><br>
+        <ul>
+          <li>
+            <a href="products.html"> <div class="featured1"></div></a><br>
+            <p><span class="emphasized">Name:</span> Clams</p>
+            <p><span class="emphasized">Price:</span> $6.99 / kg</p>
+            <p><span class="emphasized">Quantity Available:</span> 20 kgs</p>
+          </li>
+          <li>
+            <a href="products.html"><div class="featured2"></div></a> <br>
+            <p>
+              <span class="emphasized">Name:</span> Lighthouse Keychain
+            </p>
+            <p><span class="emphasized">Price:</span> $12.99</p>
+            <p><span class="emphasized">Quantity Available:</span> 25</p>
+          </li>
+          <li>
+            <a href="products.html"><div class="featured3"></div></a> <br>
+            <p><span class="emphasized">Name:</span> Herring</p>
+            <p><span class="emphasized">Price:</span> $8.50 / kg</p>
+            <p><span class="emphasized">Quantity Available:</span> 100 kgs</p>
+          </li>
+        </ul>
+        <button type="button" id="more" onclick="changePage('products.html')" onmouseover="changeButton(this.id)" onmouseout="changeBackButton(this.id)" >More Products</button>
+      </div>
+      <!-- End of featured -->
+      <div class="storypic">
+        <div class="ownerpic"><!-- Owner image here--></div>
+      </div>
+      <div class="storyText">
+        <h2>Our Story</h2>
+        <p>
+          Poseidon's Palace is a locally-owned store in the Greater Moncton area that is bringing Monctonians and its visitors a 
+          taste of the Maritimes! The store offers a variety of seafood and souvenirs that are sourced from local artisans. <br> 
+
+          <br>The shop was opened in 2007 by Saul T. Crack. Since then, it has always strived to provide the freshest seafood 
+          the local community. We take great pride in sourcing all of our seafood from local fishermen, from the wharf in
+          Alma to the piers in Murry Beach, we only buy the freshest catches ...
+        </p>
+        <a href="aboutUs.html">Read Our Story</a> 
+      </div>
+      <!-- End of about us story -->
+      <div id="testimonials">
+        <h2>Check out what our patrons are saying about us!</h2>
+        <div class="quotes"></div>
+
+        <div class="slideshowContainerQuote">
+          <div class="mySlidesQuotes fade">
+            <q
+              >Without a doubt, the BEST place in all of Moncton to buy the freshiest seafood products! From clams to lobsters,
+              they got it! Not to mention how rustic the place is!! A definite place to stop by when your are in the Moncton area!</q
+            >
+            <p class="client">- John Keats</p>
+          </div>
+
+          <div class="mySlidesQuotes fade">
+            <q
+              >Jimmy and his crew never miss to amaze me! I always feel welcome when I drop by their shop. I have been buying my fish
+              and seafood there since I moved here in Moncton in 2013. And I must say, I have never been disappointed! Way to go Poseidon's Palace!
+              Keep it sea-licious!!</q
+            >
+            <p class="client">- Ernest Hemingway</p>
+          </div>
+
+          <div class="mySlidesQuotes fade">
+            <q
+              >I went to Poseidon's Palace during my visit in Moncton. A friend recommended the place if I want local souveniers. I did not
+              really expect much at first, but, oh boy! I was amazed by the quality of the trinkets and treasures I found there! The place was
+              a total gem! I highly recommend anyone visiting Moncton to drop by, you won't get disappointed!</q
+            >
+            <p class="client">- Thomas A. Edison</p>
+          </div>
+          <br />
+          <div style="text-align:center">
+            <span class="dot2"></span>
+            <span class="dot2"></span>
+            <span class="dot2"></span>
+          </div>
+        </div>
+      </div> 
+      <!-- End of testomonial -->
+      <!-- Start of Footer -->
+      <div id="mailingList">
+            <div class="mailIcon"><!-- Mail icon here!--></div>
+            <h4>Stay in Touch</h4>
+            <p>Join our mailing list</p>
+            <input type="text" name="emailMailingList" placeholder="email address here*"> <br>
+            <button type="button" id="buttonSubscribe"> Subscribe now</button>
+      </div>
+
+      <div id="social">
+        <div class="connectIcon"><!-- Mail icon here!--></div>
+        <h4>Follow Us</h4>
+        <ul>
+           <li><a href="www.facebook.com"> <div class="facebookIcon"></div></a></li> 
+            <li><a href="www.twitter.com"> <div class="twitterIcon"></div></a></li>
+            <li> <a href="www.instagram.com"> <div class="instagramIcon"></div></a> </li>
+        </ul><br>
+        <h4>Opening Hours</h4>
+        <p><span class="emphasized">Weekdays</span> 8:00 AM - 6:00 PM</p>
+        <p><span class="emphasized">Weekends</span> 8:00 AM - Noon</p>
+      </div>
+
+      <div  id="location">
+        <div class="locationIcon"><!-- Mail icon here!--></div>
+        <h4>Location</h4>
+        <p>1234 Mountain Road, <br> Moncton, NB, E1C 8H9</p>
+        <a href="https://goo.gl/maps/DmFPHjmr1wMScLyM8">Google Map</a><br>
+        <h4>Telephone Number</h4>
+        <p> (506) 869-6279</p>
+      </div>
+    </div>
+    <!-- End of wrapper -->
+  </body>
+</html>

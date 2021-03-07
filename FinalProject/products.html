@@ -1,0 +1,122 @@
+<!--
+    Name: Susannie Vhil Tiempo
+    Last Update: March 08, 2020
+    Purpose: HTML code for the Poseidon's Palace website - Home page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Page - Poseidon's Palace</title>
+    <link rel="stylesheet" href="css/ppstyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="ppJsMain.js" defer></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header id="header">
+        <div id="logo"><!--Logo here!--></div>
+        <div id="logoText"><a href="index.html">Poseidon's Palace</a></div>
+        <nav id="navbar" class="topnav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="products.html">Products</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+          <a href="javascript:void(0);" class="icon" onclick="burgerMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </nav>
+      </header>
+      <div class="saleImage"><img class="salePic" src="css/images/sale.png" alt="Sunday Sale"></div>
+      <button class="prodSelect" type="button" id="btnSeafood" onclick="changePage('#seafoodText')" onmouseover="changeButton1(this.id,'#004fac')" onmouseout="changeBackButton1(this.id,'#004fac')">
+        Seafood Products
+      </button>
+      <button class="prodSelect" type="button" id="btnSouvenier" onclick="changePage('#souvenierText')" onmouseover="changeButton1(this.id,'#004fac')" onmouseout="changeBackButton1(this.id,'#004fac')"">
+        Souveniers
+      </button>
+      <div id="seafoodText"><p>SEAFOOD PRODUCTS</p></div>
+      <section id="seafoodProducts">
+        <div class="prodArea" id="sea1"><p><img src="css/images/lobster.jpg" alt="lobster"> Lobsters <br> Price: $12.50 </p></div>
+        <div class="prodArea" id="sea2"><p><img src="css/images/crabs.jpg" alt="crabs"> Crabs<br> Price: $8.25</p></div>
+        <div class="prodArea" id="sea3"><p><img src="css/images/scallops.jpg" alt="scallops"> Scallops <br> Price: $10.75 </p></div>
+        <div class="prodArea" id="sea4"><p><img src="css/images/mussels.jpg" alt="mussels"> Mussels <br>  Price: $8.99</p></div>
+        <div class="prodArea" id="sea5"><p><img src="css/images/clams.jpg" alt="clams">Clams<br> Price: $6.99</p></div>
+        <div class="prodArea" id="sea6"><p><img src="css/images/salmon.jpeg" alt="salmon"> Salmon <br>Price: $11.99</p></div>
+        <div class="prodArea" id="sea7"><p><img src="css/images/bass.jpg" alt="bass">Bass <br> Price: $8.50</p></div>
+        <div class="prodArea" id="sea8"><p> <img src="css/images/herring.jpg" alt="herring">Herring<br> Price: $8.50</p></div>
+        <div class="prodArea" id="sea9"><p><img src="css/images/shrimp.jpg" alt="shrimp">Shrimp <br> Price: $2.75</p></div>
+        <div class="prodArea" id="sea10"><p> <img src="css/images/oysters.jpg" alt="oysters">Oysters<br> Price: $19.99</p></div>
+      </section>
+      <div id="souvenierText"><p>SOUVENIER PRODUCTS</p></div>
+      <section id="souvenierProducts">
+        <div class="prodArea" id="sou1"><p><img src="css/images/lostertrap.jpg" alt="lobster trap"> New Brunswick Lobster traps <br> Price: $20.50 </p></div>
+        <div class="prodArea" id="sou2"><p><img src="css/images/lighthouse.jpg" alt="Lighthouses"> Hopewell Rocks Lighthouses <br> Price: $4.25</p></div>
+        <div class="prodArea" id="sou3"><p><img src="css/images/bayofundyposter.jpg" alt="Bay of Fundy Posters ">Bay of Fundy Posters <br> Price: $6.75 </p></div>
+        <div class="prodArea" id="sou4"><p><img src="css/images/hopewellmodel.jpg" alt="Hopewell Rocks Scale Models">Hopewell Rocks Scale Models <br> Price: $30.99</p></div>
+        <div class="prodArea" id="sou5"><p><img src="css/images/hopewellposter.jpg" alt="Hopewell Rocks Posters">Hopewell Rocks Posters <br> Price: $6.99</p></div>
+        <div class="prodArea" id="sou6"><p><img src="css/images/monctontruckerscap.jpg" alt="Moncton Trucker Caps"> Moncton Trucker Caps <br>Price: $11.99</p></div>
+        <div class="prodArea" id="sou7"><p><img src="css/images/nbtotebag.jpg" alt="New Brunswick Tote Bags">New Brunswick Tote Bags <br> Price: $28.50</p></div>
+        <div class="prodArea" id="sou8"><p><img src="css/images/nbsticker.jpg" alt="New Brunswick  Bumper Sticker ">New Brunswick  Bumper Sticker <br> Price: $12.50</p></div>
+        <div class="prodArea" id="sou9"><p><img src="css/images/nbmug.jpg" alt="New Brunswick  Coffee Mug">New Brunswick  Coffee Mug <br> Price: $6.75</p></div>
+        <div class="prodArea" id="sou10"><p><img src="css/images/minituresailbboat.jpg" alt="SailBoat Miniture">NB SailBoat Minitures<br> Price: $29.99</p></div>
+      </section>
+      <!-- Start of Footer -->
+      <div id="mailingList">
+        <div class="mailIcon"><!-- Mail icon here!--></div>
+        <h4>Stay in Touch</h4>
+        <p>Join our mailing list</p>
+        <input
+          type="text"
+          name="emailMailingList"
+          placeholder="email address here*"
+        />
+        <br />
+        <button type="button" id="buttonSubscribe">Subscribe now</button>
+      </div>
+
+      <div id="social">
+        <div class="connectIcon"><!-- Mail icon here!--></div>
+        <h4>Follow Us</h4>
+        <ul>
+          <li>
+            <a href="www.facebook.com"> <div class="facebookIcon"></div></a>
+          </li>
+          <li>
+            <a href="www.twitter.com"> <div class="twitterIcon"></div></a>
+          </li>
+          <li>
+            <a href="www.instagram.com"> <div class="instagramIcon"></div></a>
+          </li>
+        </ul>
+        <br />
+        <h4>Opening Hours</h4>
+        <p><span class="emphasized">Weekdays</span> 8:00 AM - 6:00 PM</p>
+        <p><span class="emphasized">Weekends</span> 8:00 AM - Noon</p>
+      </div>
+
+      <div id="location">
+        <div class="locationIcon"><!-- Mail icon here!--></div>
+        <h4>Location</h4>
+        <p>
+          1234 Mountain Road, <br />
+          Moncton, NB, E1C 8H9
+        </p>
+        <a href="https://goo.gl/maps/DmFPHjmr1wMScLyM8">Google Map</a><br />
+        <h4>Telephone Number</h4>
+        <p>(506) 869-6279</p>
+      </div>
+    </div>
+    <!-- End of wrapper -->
+  </body>
+</html>
